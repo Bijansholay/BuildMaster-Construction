@@ -60,7 +60,7 @@ This website is built using modern web technologies:
 1. Clone the repository:
    ```bash
    git clone <repository-url>
-   cd buildmaster-construction
+   cd geofathom-construction
    ```
 
 2. Install dependencies:
@@ -112,11 +112,11 @@ src/
 
 Ready to start your next construction project? Get in touch with us:
 
-- **Website**: [buildmaster.com](https://buildmaster.com)
-- **Email**: info@buildmaster.com
+- **Website**: [geofathom.com](https://geofathom.com)
+- **Email**: info@geofathom.com
 - **Phone**: 0906093417
 - **Address**: 123 Construction Ave, Build City, BC 12345
 
 ## License
 
-This project is proprietary software owned by BuildMaster Construction.
+This project is proprietary software owned by Geofathom Construction.

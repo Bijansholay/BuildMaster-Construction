@@ -1,83 +1,16 @@
 import { motion } from "motion/react";
-import { Target, Eye, ShieldCheck, Award, Clock, Users2 } from "lucide-react";
-
-const values = [
-  {
-    title: "Safety First",
-    description: "We prioritize the safety of our workers and clients above all else, maintaining strict compliance with all safety regulations.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Quality Excellence",
-    description: "We never compromise on the quality of materials or craftsmanship, ensuring every project stands the test of time.",
-    icon: Award,
-  },
-  {
-    title: "Timely Delivery",
-    description: "We understand the importance of deadlines and work tirelessly to ensure every project is completed on schedule.",
-    icon: Clock,
-  },
-  {
-    title: "Client Collaboration",
-    description: "We believe in transparent communication and working closely with our clients to bring their vision to life.",
-    icon: Users2,
-  },
-];
-
-const team = [
-  {
-    name: "Robert Harrison",
-    role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    name: "Sarah Jenkins",
-    role: "Chief Architect",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    name: "Michael Chen",
-    role: "Head of Engineering",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80",
-  },
-  {
-    name: "David Miller",
-    role: "Project Manager",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
-  },
-];
+import { Target, Eye } from "lucide-react";
+import PageHeader from "@/src/components/PageHeader";
+import { values, team } from "@/src/data/companyInfo";
 
 export default function About() {
   return (
     <div className="pt-24">
-      {/* Header */}
-      <section className="bg-slate-900 py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
-            alt="Background"
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto relative z-10 text-center space-y-6">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-bold text-white font-display"
-          >
-            About BuildMaster
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-slate-400 text-xl max-w-2xl mx-auto"
-          >
-            A legacy of excellence, a future of innovation. Discover the story behind our construction firm.
-          </motion.p>
-        </div>
-      </section>
+      <PageHeader
+        title="About Geofathom"
+        description="A legacy of excellence, a future of innovation. Discover the story behind our construction firm."
+        backgroundImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
+      />
 
       {/* Story Section */}
       <section className="py-24 px-6 bg-white">
@@ -91,22 +24,19 @@ export default function About() {
             </div>
             <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
               <p>
-                BuildMaster started as a small family-owned business with a single mission: to provide honest, high-quality construction services to our local community. Over the last 25 years, we have grown into a multi-disciplinary firm capable of handling the most complex engineering challenges.
-              </p>
+                Geofathom Engineering Services Ltd. is a multidisciplinary engineering firm committed to delivering innovative, reliable, and sustainable engineering solutions. We specialize in Construction Engineering, Geotechnical Soil Investigation, and Humanitarian Engineering Services. We provide technical expertise that supports infrastructure development, environmental sustainability, and community advancement.              </p>
               <p>
-                Our growth has been fueled by our unwavering commitment to our core values and the trust we've built with our clients. We don't just build structures; we build relationships that last as long as the buildings we create.
-              </p>
+                At Geofathom Engineering Services Ltd., we are committed to providing engineering solutions that not only support infrastructure development but also create lasting value for communities, clients, and society. We Engineer the Future, Strengthen Foundations, and Transform Communities and Societies.              </p>
             </div>
             <div className="grid grid-cols-2 gap-8 pt-4">
               <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                 <Target className="text-orange-600 mb-4" size={32} />
                 <h3 className="font-bold text-slate-900 mb-2">Our Mission</h3>
-                <p className="text-sm text-slate-500">To deliver superior construction services through innovation, integrity, and a commitment to safety.</p>
-              </div>
+                <p className="text-sm text-slate-500">To provide high-quality engineering services through professional expertise, cutting-edge technology, and client-focused solutions that contribute to national development and human well-being.</p>             </div>
               <div className="p-6 bg-slate-50 rounded-2xl border border-slate-100">
                 <Eye className="text-orange-600 mb-4" size={32} />
                 <h3 className="font-bold text-slate-900 mb-2">Our Vision</h3>
-                <p className="text-sm text-slate-500">To be the most trusted and innovative construction partner, shaping skylines and communities worldwide.</p>
+                <p className="text-sm text-slate-500">To be a leading engineering solutions provider recognized for technical excellence, innovation, integrity, and sustainable development</p>
               </div>
             </div>
           </div>

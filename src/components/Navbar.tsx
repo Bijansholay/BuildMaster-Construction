@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/src/lib/utils";
+import { COMPANY_INFO } from "@/src/data/companyInfo";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -41,7 +42,7 @@ export default function Navbar() {
             "font-bold text-2xl tracking-tight",
             scrolled ? "text-slate-900" : "text-white"
           )}>
-            BuildMaster
+            Geofathom
           </span>
         </Link>
 
@@ -61,7 +62,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="tel:+1234567890"
+            href={`tel:${COMPANY_INFO.phone}`}
             className="flex items-center gap-2 bg-orange-600 text-white px-5 py-2 rounded-full font-medium hover:bg-orange-700 transition-all shadow-lg hover:shadow-orange-500/20"
           >
             <Phone size={16} />
@@ -105,11 +106,11 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="tel:+1234567890"
+                href={`tel:${COMPANY_INFO.phone}`}
                 className="flex items-center justify-center gap-2 bg-orange-600 text-white py-3 rounded-xl font-bold mt-4 shadow-lg active:scale-95 transition-transform"
               >
                 <Phone size={20} />
-                <span>Call +1 234 567 890</span>
+                <span>Call {COMPANY_INFO.displayPhone}</span>
               </a>
             </div>
           </motion.div>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Send, MessageSquare, AlertCircle, CheckCircle2 } from "lucide-react";
+import { COMPANY_INFO } from "@/src/data/companyInfo";
+import PageHeader from "@/src/components/PageHeader";
 
 export default function Contact() {
   const [formType, setFormType] = useState<"inquiry" | "complaint">("inquiry");
@@ -17,7 +19,7 @@ export default function Contact() {
     setStatus("submitting");
     
     try {
-      const recipient = "najibsholadoye04@gmail.com";
+      const recipient = COMPANY_INFO.email;
       const subject = `${formType.toUpperCase()}: From ${formData.name}`;
       const body = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`;
       
@@ -44,34 +46,11 @@ export default function Contact() {
 
   return (
     <div className="pt-24">
-      {/* Header */}
-      <section className="bg-slate-900 py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.unsplash.com/photo-1516387933999-ed3315fb1ad5?auto=format&fit=crop&w=1920&q=80"
-            alt="Background"
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto relative z-10 text-center space-y-6">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-bold text-white font-display"
-          >
-            Contact & Support
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-slate-400 text-xl max-w-2xl mx-auto"
-          >
-            Have a question or need to report an issue? We're here to help you every step of the way.
-          </motion.p>
-        </div>
-      </section>
+      <PageHeader
+        title="Contact & Support"
+        description="Have a question or need to report an issue? We're here to help you every step of the way."
+        backgroundImage="https://images.unsplash.com/photo-1516387933999-ed3315fb1ad5?auto=format&fit=crop&w=1920&q=80"
+      />
 
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-16">
@@ -92,7 +71,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">Call Us</h3>
                   <p className="text-slate-500 text-sm mb-2">Mon-Fri from 8am to 6pm.</p>
-                  <a href="tel:+1234567890" className="text-orange-600 font-bold hover:underline">+1 234 567 890</a>
+                  <a href={`tel:${COMPANY_INFO.phone}`} className="text-orange-600 font-bold hover:underline">{COMPANY_INFO.displayPhone}</a>
                 </div>
               </div>
 
@@ -103,7 +82,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">Email Us</h3>
                   <p className="text-slate-500 text-sm mb-2">Our friendly team is here to help.</p>
-                  <a href="mailto:info@buildmaster.com" className="text-orange-600 font-bold hover:underline">info@buildmaster.com</a>
+                  <a href={`mailto:${COMPANY_INFO.email}`} className="text-orange-600 font-bold hover:underline">{COMPANY_INFO.email}</a>
                 </div>
               </div>
 
@@ -114,7 +93,7 @@ export default function Contact() {
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">Visit Us</h3>
                   <p className="text-slate-500 text-sm mb-2">Come say hello at our office.</p>
-                  <p className="text-slate-900 font-bold">123 Construction Way, Skyline City</p>
+                  <p className="text-slate-900 font-bold">{COMPANY_INFO.address}</p>
                 </div>
               </div>
             </div>

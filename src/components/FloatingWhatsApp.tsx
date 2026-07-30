@@ -1,10 +1,9 @@
 import { MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
+import { COMPANY_INFO } from "@/src/data/companyInfo";
 
 export default function FloatingWhatsApp() {
-  const phoneNumber = "1234567890"; // Replace with real number
-  const message = "Hello BuildMaster! I'm interested in your construction services.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${COMPANY_INFO.whatsappPhone}?text=${encodeURIComponent(COMPANY_INFO.whatsappMessage)}`;
 
   return (
     <motion.a

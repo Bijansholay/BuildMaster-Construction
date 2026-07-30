@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { COMPANY_INFO } from "@/src/data/companyInfo";
 
 export default function Footer() {
   return (
@@ -12,7 +13,7 @@ export default function Footer() {
               <span className="text-white font-bold text-xl">B</span>
             </div>
             <span className="font-bold text-2xl tracking-tight text-white">
-              BuildMaster
+              Geofathom
             </span>
           </Link>
           <p className="text-slate-400 leading-relaxed">
@@ -46,10 +47,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white font-bold text-lg mb-6">Services</h3>
           <ul className="space-y-4">
-            <li><Link to="/services" className="hover:text-orange-500 transition-colors">Residential Construction</Link></li>
-            <li><Link to="/services" className="hover:text-orange-500 transition-colors">Commercial Building</Link></li>
-            <li><Link to="/services" className="hover:text-orange-500 transition-colors">Renovations</Link></li>
-            <li><Link to="/services" className="hover:text-orange-500 transition-colors">Civil Engineering</Link></li>
+            <li><Link to="/services" className="hover:text-orange-500 transition-colors">Construction Engineering Services</Link></li>
+            <li><Link to="/services" className="hover:text-orange-500 transition-colors"> Geotechnical Soil Investigation</Link></li>
+            <li><Link to="/services" className="hover:text-orange-500 transition-colors">Humanitarian Engineering Services</Link></li>
+            {/* <li><Link to="/services" className="hover:text-orange-500 transition-colors">Civil Engineering</Link></li> */}
           </ul>
         </div>
 
@@ -59,22 +60,22 @@ export default function Footer() {
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <MapPin className="text-orange-500 shrink-0" size={20} />
-              <span>123 Construction Way, Skyline City, SC 54321</span>
+              <span>{COMPANY_INFO.address}</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="text-orange-500 shrink-0" size={20} />
-              <a href="tel:+1234567890" className="hover:text-orange-500 transition-colors">+1 234 567 890</a>
+              <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-orange-500 transition-colors">{COMPANY_INFO.displayPhone}</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="text-orange-500 shrink-0" size={20} />
-              <a href="mailto:info@buildmaster.com" className="hover:text-orange-500 transition-colors">info@buildmaster.com</a>
+              <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-orange-500 transition-colors">{COMPANY_INFO.email}</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
-        <p>© {new Date().getFullYear()} BuildMaster Construction Company. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Geofathom Construction Company. All rights reserved.</p>
       </div>
     </footer>
   );

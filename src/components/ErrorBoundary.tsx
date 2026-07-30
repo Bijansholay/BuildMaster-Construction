@@ -11,13 +11,10 @@ interface State {
 }
 
 export default class ErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    (this as any).state = {
-      hasError: false,
-      error: null,
-    };
-  }
+  public state: State = {
+    hasError: false,
+    error: null,
+  };
 
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
@@ -28,10 +25,10 @@ export default class ErrorBoundary extends React.Component<Props, State> {
   }
 
   public render() {
-    if ((this as any).state.hasError) {
+    if (this.state.hasError) {
       let errorMessage = "An unexpected error occurred.";
-      if ((this as any).state.error?.message) {
-        errorMessage = (this as any).state.error.message;
+      if (this.state.error?.message) {
+        errorMessage = this.state.error.message;
       }
 
       return (
@@ -58,6 +55,6 @@ export default class ErrorBoundary extends React.Component<Props, State> {
       );
     }
 
-    return (this as any).props.children;
+    return this.props.children;
   }
 }

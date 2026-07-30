@@ -1,31 +1,7 @@
 import { motion } from "motion/react";
-import { ArrowRight, CheckCircle2, Building2, HardHat, Ruler, Users } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const stats = [
-  { label: "Projects Completed", value: "500+", icon: CheckCircle2 },
-  { label: "Years Experience", value: "25+", icon: Building2 },
-  { label: "Expert Workers", value: "150+", icon: HardHat },
-  { label: "Happy Clients", value: "400+", icon: Users },
-];
-
-const featuredServices = [
-  {
-    title: "Residential Construction",
-    description: "Building your dream home with precision and care, from foundation to finish.",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Commercial Projects",
-    description: "Modern office spaces and retail buildings designed for business success.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Civil Engineering",
-    description: "Large-scale infrastructure projects that shape the future of our cities.",
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=800&q=80",
-  },
-];
+import { stats, featuredServices } from "@/src/data/companyInfo";
 
 export default function Home() {
   return (
@@ -50,14 +26,14 @@ export default function Home() {
             className="space-y-8"
           >
             <span className="inline-block px-4 py-1.5 bg-orange-600 text-white text-sm font-bold rounded-full tracking-wider uppercase">
-              Building Excellence Since 1998
+              Building Excellence Since 2015
             </span>
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight font-display">
               Constructing Your <br />
               <span className="text-orange-500">Vision into Reality</span>
             </h1>
             <p className="text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed">
-              BuildMaster is a leading construction company dedicated to delivering high-quality, sustainable, and innovative building solutions.
+              To be a leading engineering solutions provider recognized for technical excellence, innovation, integrity, and sustainable development.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Link
@@ -145,7 +121,8 @@ export default function Home() {
               </h2>
             </div>
             <p className="text-lg text-slate-600 leading-relaxed">
-              With over two decades of experience, BuildMaster has established itself as a premier construction firm. We specialize in turning complex blueprints into stunning architectural landmarks. Our commitment to safety, quality, and sustainability is what sets us apart.
+              Geofathom Engineering Services Ltd. is a multidisciplinary engineering firm committed to delivering innovative, reliable, and sustainable engineering solutions. We specialize in Construction Engineering, Geotechnical Soil Investigation, and Humanitarian Engineering Services. We provide technical expertise that supports infrastructure development, environmental sustainability, and community advancement.
+
             </p>
             <ul className="space-y-4">
               {["Quality Control System", "Professional & Expert Workers", "100% Satisfaction Guarantee", "Accurate Testing Processes"].map((item, i) => (

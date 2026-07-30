@@ -1,82 +1,15 @@
 import { motion } from "motion/react";
-import { Building2, Home, Hammer, Ruler, HardHat, Shovel, Paintbrush, Zap } from "lucide-react";
-
-const services = [
-  {
-    title: "Residential Construction",
-    description: "From custom luxury homes to modern apartment complexes, we build living spaces that combine comfort with structural integrity.",
-    icon: Home,
-    features: ["Custom Home Design", "Multi-family Units", "Sustainable Building", "Smart Home Integration"],
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Commercial Building",
-    description: "We deliver high-performance commercial spaces, including offices, retail centers, and industrial facilities designed for efficiency.",
-    icon: Building2,
-    features: ["Office Complexes", "Retail Spaces", "Industrial Warehouses", "Hospitality Buildings"],
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Renovations & Remodeling",
-    description: "Breathe new life into existing structures with our expert renovation services, focusing on modernization and value addition.",
-    icon: Hammer,
-    features: ["Interior Remodeling", "Structural Upgrades", "Facade Restoration", "Kitchen & Bath"],
-    image: "https://images.unsplash.com/photo-1503387762-592dee58c460?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Civil Engineering",
-    description: "Our engineering team handles large-scale infrastructure projects, ensuring durability and safety for public and private sectors.",
-    icon: Ruler,
-    features: ["Roads & Bridges", "Water Systems", "Urban Planning", "Site Development"],
-    image: "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Project Management",
-    description: "Comprehensive oversight of your construction project, from initial planning and budgeting to final inspection.",
-    icon: HardHat,
-    features: ["Budgeting & Estimation", "Scheduling", "Quality Assurance", "Risk Management"],
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Specialized Trades",
-    description: "Expert electrical, plumbing, and HVAC services integrated seamlessly into your construction or renovation project.",
-    icon: Zap,
-    features: ["Electrical Systems", "Plumbing & Drainage", "HVAC Installation", "Energy Audits"],
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
-  },
-];
+import PageHeader from "@/src/components/PageHeader";
+import { services } from "@/src/data/companyInfo";
 
 export default function Services() {
   return (
     <div className="pt-24">
-      {/* Header */}
-      <section className="bg-slate-900 py-24 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.unsplash.com/photo-1503387762-592dee58c460?auto=format&fit=crop&w=1920&q=80"
-            alt="Background"
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </div>
-        <div className="max-w-7xl mx-auto relative z-10 text-center space-y-6">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-6xl font-bold text-white font-display"
-          >
-            Our Services
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-slate-400 text-xl max-w-2xl mx-auto"
-          >
-            Comprehensive construction solutions delivered with precision, quality, and a focus on your unique requirements.
-          </motion.p>
-        </div>
-      </section>
+      <PageHeader
+        title="Our Services"
+        description="Comprehensive construction solutions delivered with precision, quality, and a focus on your unique requirements."
+        backgroundImage="https://images.unsplash.com/photo-1503387762-592dee58c460?auto=format&fit=crop&w=1920&q=80"
+      />
 
       {/* Services Grid */}
       <section className="py-24 px-6 bg-white">
@@ -107,16 +40,32 @@ export default function Services() {
                   <p className="text-slate-600 leading-relaxed mb-8 flex-1">
                     {service.description}
                   </p>
-                  <div className="space-y-3">
-                    <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Key Features</h4>
-                    <div className="grid grid-cols-1 gap-2">
-                      {service.features.map((feature, j) => (
-                        <div key={j} className="flex items-center gap-2 text-sm text-slate-700 font-medium">
-                          <div className="w-1.5 h-1.5 bg-orange-600 rounded-full" />
-                          {feature}
-                        </div>
-                      ))}
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Key Features</h4>
+                      <div className="grid grid-cols-1 gap-2">
+                        {service.features.map((feature, j) => (
+                          <div key={j} className="flex items-center gap-2 text-sm text-slate-700 font-medium">
+                            <div className="w-1.5 h-1.5 bg-orange-600 rounded-full" />
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
                     </div>
+
+                    {'whyItMatters' in service && service.whyItMatters && (
+                      <div className="pt-4 border-t border-slate-200/80">
+                        <h4 className="text-sm font-bold text-orange-600 uppercase tracking-widest mb-3">Why Investigation Matters</h4>
+                        <div className="grid grid-cols-1 gap-2">
+                          {service.whyItMatters.map((item, k) => (
+                            <div key={k} className="flex items-center gap-2 text-sm text-slate-700 font-semibold">
+                              <span className="text-orange-600 font-bold">✓</span>
+                              {item}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>

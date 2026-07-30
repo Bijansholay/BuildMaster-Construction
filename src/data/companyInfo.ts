@@ -82,7 +82,7 @@ export const team = [
     name: "Engr Dr Muniru O. Sholadoye",
     role: "Project Director",
     number:"08036948904",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+    image: "/muniru-sholadoye.jpeg"
   },
   {
     name: "Engr Sanni Lawal",

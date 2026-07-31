@@ -117,7 +117,7 @@ export default function Home() {
             <div className="space-y-4">
               <span className="text-orange-600 font-bold tracking-widest uppercase">Who We Are</span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight font-display">
-                Reliable Construction Services for Every Need
+                Multidisciplinary Engineering. Innovative Solutions.
               </h2>
             </div>
             <p className="text-lg text-slate-600 leading-relaxed">

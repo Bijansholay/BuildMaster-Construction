@@ -9,15 +9,17 @@ export default function Footer() {
         {/* Company Info */}
         <div className="space-y-6">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-orange-600 flex items-center justify-center rounded-lg shadow-lg">
-              <span className="text-white font-bold text-xl">B</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt="Geofathom Logo"
+              className="h-10 w-auto object-contain rounded-lg bg-white p-0.5 shadow-md"
+            />
             <span className="font-bold text-2xl tracking-tight text-white">
               Geofathom
             </span>
           </Link>
           <p className="text-slate-400 leading-relaxed">
-            Building excellence through innovation and integrity. We are your trusted partner for residential, commercial, and civil engineering projects.
+            We design and implement engineering solutions that address societal challenges while promoting resilience, sustainability, and inclusive development.
           </p>
           <div className="flex gap-4">
             {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (

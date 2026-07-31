@@ -54,7 +54,7 @@ export default function Portfolio() {
     <div className="pt-24 min-h-screen bg-slate-50/50">
       <PageHeader
         title="Our Portfolio"
-        description="Explore Geofathom's track record of premium engineering and consultancy services delivered with precision and safety."
+        description="Explore Geofathom's track record of Multidisciplinary Engineering and and Innovative Solutions delivered with precision and safety."
         backgroundImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
       />
 

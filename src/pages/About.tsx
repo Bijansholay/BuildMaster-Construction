@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { motion } from "motion/react";
-import { Target, Eye } from "lucide-react";
+import { Target, Eye, User } from "lucide-react";
 import PageHeader from "@/src/components/PageHeader";
 import { values, team } from "@/src/data/companyInfo";
 
 export default function About() {
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
+
   return (
     <div className="pt-24">
       <PageHeader
@@ -60,7 +63,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-16">
             <span className="text-orange-600 font-bold tracking-widest uppercase">Our Values</span>
-            <h2 className="text-4xl font-bold text-slate-900">What Drives Us</h2>
+            <h2 className="text-4xl font-bold text-slate-900">Why Choose Geofathom Engineering Services Limited?</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, i) => (
@@ -100,13 +103,18 @@ export default function About() {
                 transition={{ delay: i * 0.1 }}
                 className="group text-center"
               >
-                <div className="relative mb-6 overflow-hidden rounded-3xl aspect-square">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
-                  />
+                <div className="relative mb-6 overflow-hidden rounded-3xl aspect-square bg-slate-100 flex items-center justify-center">
+                  {member.image && !imageErrors[member.name] ? (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      referrerPolicy="no-referrer"
+                      onError={() => setImageErrors((prev) => ({ ...prev, [member.name]: true }))}
+                    />
+                  ) : (
+                    <User size={64} className="text-slate-400 stroke-[1.5]" />
+                  )}
                   <div className="absolute inset-0 bg-orange-600/20 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">{member.name}</h3>

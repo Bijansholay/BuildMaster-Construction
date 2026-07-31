@@ -35,9 +35,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-orange-600 flex items-center justify-center rounded-lg shadow-lg">
-            <span className="text-white font-bold text-xl">B</span>
-          </div>
+          <img
+            src="/logo.png"
+            alt="Geofathom Logo"
+            className="h-10 w-auto object-contain rounded-lg bg-white p-0.5 shadow-md"
+          />
           <span className={cn(
             "font-bold text-2xl tracking-tight",
             scrolled ? "text-slate-900" : "text-white"

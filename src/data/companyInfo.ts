@@ -56,24 +56,19 @@ export const featuredServices = [
 
 export const values = [
   {
-    title: "Safety First",
-    description: "We prioritize the safety of our workers and clients above all else, maintaining strict compliance with all safety regulations.",
+    title: "Professional Excellence",
+    description: "A team of highly skilled engineers and technical experts providing innovative solutions and applying modern engineering techniques and technologies to delivering high quality services.",
     icon: ShieldCheck
   },
   {
-    title: "Quality Excellence",
-    description: "We never compromise on the quality of materials or craftsmanship, ensuring every project stands the test of time.",
+    title: "Integrity and Accountability",
+    description: "We adhere to ethical professional practices, ensuring strict adherence to safety standards and industry regulations.",
     icon: Award
   },
   {
-    title: "Timely Delivery",
-    description: "We understand the importance of deadlines and work tirelessly to ensure every project is completed on schedule.",
+    title: "Client Satisfaction",
+    description: "We are committed to meeting and exceeding client expectations through quality service delivery, and value for money",
     icon: Clock
-  },
-  {
-    title: "Client Collaboration",
-    description: "We believe in transparent communication and working closely with our clients to bring their vision to life.",
-    icon: Users2
   }
 ];
 
@@ -88,26 +83,26 @@ export const team = [
     name: "Engr Sanni Lawal",
     role: "Project manager",
     number:"08035362845",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+    image: ""
   },
   {
     name: "Engr. Sanni Suleiman A.",
     role: "Team lead",
     number:"08188371729",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80"
+    image: ""
   },
   {
     name: "Geo. Fatai Kalejaiye",
     role: "Team manager",
     number:"08036668932",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80"
+    image: ""
   }
 ];
 
 export const services = [
   {
     title: "Construction Engineering Services",
-    description: "We provide comprehensive construction engineering solutions from project conception to completion. Consulting Phone No.: 08036948904",
+    description: "We provide comprehensive construction engineering solutions from project conception to completion. ",
     icon: Ruler,
     features: [
       "Structural Engineering Design",

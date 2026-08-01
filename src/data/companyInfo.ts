@@ -83,7 +83,7 @@ export const team = [
     name: "Yusuf O. Sholadoye",
     role: "Senior Software Development & ICT Consultant",
     number:"09069257590",
-    image: ""
+    image: "/yusuf.jpeg"
   },
   {
     name: "Sholadoye Najib Adebisi",
@@ -93,7 +93,7 @@ export const team = [
   },
   {
   name: "Tohirat M. Sholadoye",
-    role: "Polymer, Textile, Industrial Materials Engineering & Marketing & Business Development Consultant",
+    role: "Polymer, Textile, Industrial Materials Engineering, Marketing & Business Development Consultant",
     number:"08165786459",
     image: "/tohirah.jpeg"
   },,
@@ -113,7 +113,7 @@ export const team = [
     name: "Engr. Sanni Lawal",
     role: "Senior Geotechnical Engineer",
     number:"08036668932",
-    image: ""
+    image: "/sanni.jpeg"
   },
   {
     name: "Geo. Fatai Kaleijaiye",
@@ -125,7 +125,13 @@ export const team = [
     name: "QS. Dr. Abdul Hakeem Garba",
     role: "Senior Quantity Surveyor",
     number:"",
-    image: ""
+    image: "/garba.jpeg"
+  },
+  {
+    name:"Tomori Fatai",
+    role:"Research consultant",
+    number:"",
+    image:"/tomori.jpeg"
   }
 ];
 

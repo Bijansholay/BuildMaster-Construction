@@ -75,26 +75,56 @@ export const values = [
 export const team = [
   {
     name: "Engr Dr Muniru O. Sholadoye",
-    role: "Project Director",
+    role: "Managing Director & Principal Consultant",
     number:"08036948904",
     image: "/muniru-sholadoye.jpeg"
   },
   {
-    name: "Engr Sanni Lawal",
-    role: "Project manager",
-    number:"08035362845",
+    name: "Yusuf O. Sholadoye",
+    role: "Senior Software Development & ICT Consultant",
+    number:"09069257590",
     image: ""
   },
   {
-    name: "Engr. Sanni Suleiman A.",
-    role: "Team lead",
-    number:"08188371729",
+    name: "Sholadoye Najib Adebisi",
+    role: "Assistant ICT Infrastructure & Systems Consultant",
+    number:"09067093417",
+    image: "/najib.jpeg"
+  },
+  {
+  name: "Tohirat M. Sholadoye",
+    role: "Polymer, Textile, Industrial Materials Engineering Consultant & Marketing & Business Development Consultant",
+    number:"08165786459",
+    image: ""
+  },,
+  {
+    name: "Jalalulah Sholadoye",
+    role: "Architectural Design Assistant",
+    number:"08088162667",
     image: ""
   },
   {
-    name: "Geo. Fatai Kalejaiye",
-    role: "Team manager",
+    name: "Engr. Suleiman Adebayo Sanni",
+    role: "Senior Services Engineer",
     number:"08036668932",
+    image: ""
+  },
+  {
+    name: "Engr. Sanni Lawal",
+    role: "Senior Geotechnical Engineer",
+    number:"08036668932",
+    image: ""
+  },
+  {
+    name: "Geo. Fatai Kaleijaiye",
+    role: "Senior Geologist",
+    number:"08036668932",
+    image: ""
+  },
+  {
+    name: "QS. Dr. Abdul Hakeem Garba",
+    role: "Senior Quantity Surveyor",
+    number:"",
     image: ""
   }
 ];

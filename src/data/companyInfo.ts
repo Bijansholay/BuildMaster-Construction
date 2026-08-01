@@ -93,9 +93,9 @@ export const team = [
   },
   {
   name: "Tohirat M. Sholadoye",
-    role: "Polymer, Textile, Industrial Materials Engineering Consultant & Marketing & Business Development Consultant",
+    role: "Polymer, Textile, Industrial Materials Engineering & Marketing & Business Development Consultant",
     number:"08165786459",
-    image: ""
+    image: "/tohirah.jpeg"
   },,
   {
     name: "Jalalulah Sholadoye",
@@ -107,7 +107,7 @@ export const team = [
     name: "Engr. Suleiman Adebayo Sanni",
     role: "Senior Services Engineer",
     number:"08036668932",
-    image: ""
+    image: "/suleiman.jpeg"
   },
   {
     name: "Engr. Sanni Lawal",

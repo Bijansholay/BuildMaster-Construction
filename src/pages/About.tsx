@@ -22,7 +22,7 @@ export default function About() {
             <div className="space-y-4">
               <span className="text-orange-600 font-bold tracking-widest uppercase">Our Story</span>
               <h2 className="text-4xl font-bold text-slate-900 leading-tight">
-                Building the Future Since 1998
+                Building the Future Since 2015
               </h2>
             </div>
             <div className="space-y-6 text-slate-600 text-lg leading-relaxed">

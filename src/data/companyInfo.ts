@@ -32,8 +32,8 @@ export const COMPANY_INFO = {
 export const stats = [
   { label: "Projects Completed", value: "10+", icon: CheckCircle2 },
   { label: "Years Experience", value: "10+", icon: Building2 },
-  { label: "Expert Workers", value: "150+", icon: HardHat },
-  { label: "Happy Clients", value: "400+", icon: Users }
+  { label: "Expert Workers", value: "15", icon: HardHat },
+  { label: "Satisfactory Clients", value: "20+", icon: Users }
 ];
 
 export const featuredServices = [
